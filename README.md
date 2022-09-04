@@ -1,5 +1,12 @@
 # wrotate-screen
-This is a workaround for screen autorotation issue on Wayland.
+This is a workaround for screen autorotation issue on GNOME Wayland.
+
+The script relies on rotate-monitor key shortcut:
+
+```
+gsettings set org.gnome.mutter.keybindings rotate-monitor ['XF86RotateWindows', '<Control>F8']
+```
+You may have to adjust the key code used in the script in order to make the script working properly. See `/usr/include/linux/input-event-codes.h` for available key codes.
 
 ## Requirements
 - iio-sensor-proxy
