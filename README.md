@@ -19,7 +19,10 @@ git clone https://github.com/vincenzocaputo/wrotate-screen
 cd wrotate-screen
 sudo cp rotate-screen.sh /usr/local/bin/rotate-screen.sh
 sudo chmod +x /usr/local/bin/rotate-screen.sh
-sudo cp rotate-screen.service /etc/systemd/system/rotate-screen.service
+sudo cp ydotoold.service /usr/local/lib/systemd/system/ydotoold.service
+sudo cp rotate-screen.service /usr/local/lib/systemd/system/rotate-screen.service
+sudo systemctl enable ydotoold.service
+sudo systemctl start ydotoold.service
 sudo systemctl enable rotate-screen.service
 sudo systemctl start rotate-screen.service
 ```
